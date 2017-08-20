@@ -25,6 +25,7 @@
 		   var compWin = false;
 		   var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
+
 	document.onkeyup = function(event) {
 
 		var userGuess = event.key;
@@ -60,14 +61,18 @@
 	    	
 	    }
 
+	   		console.log("Cheat sheet: " + computerGuess);
+
 	   		
 	    	var html =
 	         "<p>You chose the letter: " + userGuess + "</p>" +
 	         "<p>wins: " + wins + "</p>" +
 	         "<p>losses: " + losses + "</p>" +
-	         "<p>guesses: " + guesses + "</p>";
+	         "<p>guesses: " + guesses + "</p>" +
+	         "Open console for cheat sheet!";
 
 	        document.querySelector("#psychic").innerHTML = html;
+	        
 	};
 
 	</script>
