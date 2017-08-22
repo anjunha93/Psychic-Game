@@ -22,10 +22,11 @@
 		   var wins = 0;
 		   var losses = 0;	
 		   var guesses = 10;
+		   var guessedLetters = [];
 		   var guessesZero = false;
 		   var compWin = false;
 		   var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-			
+
 
 	document.onkeyup = function(event) {
 
@@ -62,7 +63,12 @@
 	    	
 	    }
 
-	   		
+	        var guessesSoFar = function() {
+	        	
+	        };
+
+	        guessedLetters.push(userGuess);
+			  guessesSoFar();
 
 	   		
 	    	var html =
@@ -70,9 +76,12 @@
 	         "<p>wins: " + wins + "</p>" +
 	         "<p>losses: " + losses + "</p>" +
 	         "<p>guesses: " + guesses + "</p>" +
-	         "Open console for cheat sheet!";
+	         "<p>guesses: " + guessedLetters + "</p>" +
+	         "<p>Open console for cheat sheet!</p>";
+	        
 
-	        document.querySelector("#psychic").innerHTML = html;
+	      	
+	        document.querySelector("#psychic").innerHTML = html; 
 	        console.log("Cheat sheet: " + computerGuess);
 	};
 
